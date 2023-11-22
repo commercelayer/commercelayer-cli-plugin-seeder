@@ -76,7 +76,7 @@
     "@commercelayer/cli-core": "^4.3.3",
     "@commercelayer/sdk": "^5.22.1",
     "@oclif/core": "^2.15.0",
-    "axios": "1.6.1",
+    "axios": "1.6.2",
     "listr": "^0.14.3",
     "tslib": "^2.6.2"
   },
