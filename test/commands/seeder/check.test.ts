@@ -6,5 +6,5 @@ describe('seeder:check', () => {
   it('runs NoC', async () => {
     const { stdout } = await runCommand<{ name: string }>(['seeder:noc'])
     expect(stdout).to.contain('-= NoC =-')
-  }).timeout(15000)
+  }).timeout(5000)
 })
