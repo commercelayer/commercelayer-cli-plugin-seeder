@@ -7,7 +7,7 @@
   "repository": "commercelayer/commercelayer-cli-plugin-seeder",
   "bugs": "https://github.com/commercelayer/commercelayer-cli-plugin-seeder/issues",
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "files": [
     "/bin/run.*",
@@ -50,7 +50,7 @@
     "readme": "cl-cli-dev readme --plugin --bin=commercelayer && git add README.md",
     "lint": "biome check --enforce-assist=true",
     "check": "biome check --enforce-assist=true --write",
-    "release": "pnpm upgrade && pnpm lint && pnpm prepack && pnpm postpack"
+    "release": "pnpm upgrade && pnpm test && pnpm prepack && pnpm postpack"
   },
   "types": "lib/index.d.ts",
   "devDependencies": {
