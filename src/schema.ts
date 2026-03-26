@@ -1,4 +1,4 @@
-import { CLIError } from '@oclif/core/lib/errors'
+import { Errors } from '@oclif/core';
 import { getCommerceLayerDataFile, pathJoin } from './common'
 import config from './config'
 
@@ -74,9 +74,9 @@ const relationshipType = (type: string, name: string, value: string): string | u
 
   if (Array.isArray(rel)) { // type is an ENUM
     const idx = value.indexOf('/')
-    if (idx < 0) throw new CLIError(`Field ${name} of ${type} is an ENUM, you must specify the related resource type`)
+    if (idx < 0) throw new Errors.CLIError(`Field ${name} of ${type} is an ENUM, you must specify the related resource type`)
     const rt = value.substring(0, idx)
-    if (!rel.includes(rt)) throw new CLIError(`Invalid resource type for field ${name}: ${rt}`)
+    if (!rel.includes(rt)) throw new Errors.CLIError(`Invalid resource type for field ${name}: ${rt}`)
     return rt
   }
 

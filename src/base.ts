@@ -2,9 +2,7 @@ import { type ApiMode, clApi, clColor, clToken, clUpdate, clUtil, type Method } 
 import * as cliux from '@commercelayer/cli-ux'
 import type { CommerceLayerClient, ListResponse, QueryParamsList, Resource, ResourceId } from '@commercelayer/sdk'
 import commercelayer, { CommerceLayerStatic } from '@commercelayer/sdk'
-import { Command, Flags } from '@oclif/core'
-import type { CLIError } from '@oclif/core/lib/errors'
-import type { CommandError } from '@oclif/core/lib/interfaces'
+import { Command, type Errors, Flags, type Interfaces } from '@oclif/core'
 import { isRemotePath, pathJoin } from './common'
 import config from './config'
 import { type BusinessModel, readModelData } from './data'
@@ -66,7 +64,7 @@ export default abstract class extends Command {
   }
 
 
-  async catch(error: CLIError): Promise<any> {
+  async catch(error: Errors.CLIError): Promise<any> {
     if ((error.code === 'EEXIT') && (error.message === 'EEXIT: 0')) return
     return await super.catch(error)
   }
@@ -110,7 +108,7 @@ export default abstract class extends Command {
       })
       .catch(error => {
         cliux.action.stop(clColor.msg.error('Error'))
-        this.error(error as CommandError)
+        this.error(error as Interfaces.CommandError)
       })
       .finally(() => { this.log() })
   }
