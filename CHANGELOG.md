@@ -1,9 +1,26 @@
-## [5.2.2](https://github.com/commercelayer/commercelayer-cli-plugin-seeder/compare/v5.2.1...v5.2.2) (2026-04-14)
+# [6.0.0-oclif4.2](https://github.com/commercelayer/commercelayer-cli-plugin-seeder/compare/v6.0.0-oclif4.1...v6.0.0-oclif4.2) (2026-04-28)
 
 
 ### Bug Fixes
 
 * update dependencies and add updates workflow ([92bef20](https://github.com/commercelayer/commercelayer-cli-plugin-seeder/commit/92bef20211cfc74190f3808ef8a6a70870e7b9a0))
+
+# [6.0.0-oclif4.1](https://github.com/commercelayer/commercelayer-cli-plugin-seeder/compare/v5.2.1...v6.0.0-oclif4.1) (2026-03-26)
+
+
+### Bug Fixes
+
+* fix actions end release config ([87d051e](https://github.com/commercelayer/commercelayer-cli-plugin-seeder/commit/87d051eeb3603ae600db51959a9b2027b8bd5c69))
+
+
+### Features
+
+* upgrade to oclif core v4 ([c0c1a19](https://github.com/commercelayer/commercelayer-cli-plugin-seeder/commit/c0c1a191871f7e289be8674a793747281fce9b76))
+
+
+### BREAKING CHANGES
+
+* upgrade to oclif core v4
 
 ## [5.2.1](https://github.com/commercelayer/commercelayer-cli-plugin-seeder/compare/v5.2.0...v5.2.1) (2026-03-24)
 
